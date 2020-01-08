@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "md5": "^2.2.1",
     "mongodb": "^3.4.0",
     "yargs": "^15.0.2"
   },
