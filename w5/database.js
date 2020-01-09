@@ -17,6 +17,12 @@ let database = process.env.DB_NAME
 // // Use connect method to connect to the Server
 
 
+let url = `mongodb+srv://${username}:${encodeURIComponent(password)}@${dbhost}/${database}`
+
+// Create a new MongoClient
+const client = new MongoClient(url, { useUnifiedTopology: true });
+
+
 // client.connect(function(err) {
 //   if (err) {
 //       console.error('Error', err)
@@ -33,7 +39,7 @@ let database = process.env.DB_NAME
 // TODO
   // use a database using dbName
   // create a collections name `users`
-  // insert at least two users:
+  // insert at least 3 users:
   /*
       {
           "fullName": "A Thi No",
@@ -96,3 +102,4 @@ client.connect(err => {
   // .catch(err => console.error(`Failed to insert item: ${err}`))
   client.close();
 });
+
